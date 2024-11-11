@@ -14,6 +14,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.superheroes.model.HeroesRepository
 import com.example.superheroes.ui.theme.SuperheroesTheme
 
@@ -24,7 +25,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             SuperheroesTheme {
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-
+                    SuperheroesApp()
                 }
             }
         }
@@ -56,4 +57,12 @@ fun TopAppBar(modifier: Modifier = Modifier) {
         },
         modifier = modifier
     )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun SuperHeroesPreview() {
+    SuperheroesTheme {
+        SuperheroesApp()
+    }
 }
