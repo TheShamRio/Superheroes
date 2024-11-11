@@ -7,6 +7,10 @@ import androidx.compose.animation.core.Spring
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Card
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -39,4 +43,16 @@ fun HeroesList(
     }
 }
 
+@Composable
+fun HeroListItem(
+    hero: Hero,
+    modifier: Modifier = Modifier
+) {
+    Card(
+        modifier = modifier,
+    ) {
+        Row(modifier = Modifier.fillMaxWidth().padding(16.dp)) {
+
+        }
+    }
 }
