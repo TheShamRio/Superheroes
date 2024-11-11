@@ -14,6 +14,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import com.example.superheroes.model.HeroesRepository
 import com.example.superheroes.ui.theme.SuperheroesTheme
 
 
@@ -37,7 +38,9 @@ fun SuperheroesApp() {
         modifier = Modifier.fillMaxSize(),
         topBar = { TopAppBar() }
     ) {
-
+        paddingValues ->
+        val heroes = HeroesRepository.heroes
+        HeroesList(heroes = heroes, contentPadding = paddingValues)
     }
 }
 
