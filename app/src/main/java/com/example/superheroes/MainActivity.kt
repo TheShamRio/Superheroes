@@ -14,7 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.superheroes.model.HeroesRepository
+import com.example.superheroes.model.AdviceRepository
 import com.example.superheroes.ui.theme.SuperheroesTheme
 
 
@@ -38,8 +38,8 @@ fun SuperheroesApp() {
         topBar = { TopAppBar() }
     ) {
             paddingValues ->
-        val advices = HeroesRepository.advices
-        HeroesList(advices = advices, contentPadding = paddingValues)
+        val advices = AdviceRepository.advices
+        AdvicesList(advices = advices, contentPadding = paddingValues)
     }
 }
 

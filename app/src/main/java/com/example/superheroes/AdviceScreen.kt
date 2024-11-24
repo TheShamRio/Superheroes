@@ -36,13 +36,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.superheroes.model.Advice
-import com.example.superheroes.model.HeroesRepository
+import com.example.superheroes.model.AdviceRepository
 import com.example.superheroes.ui.theme.SuperheroesTheme
 
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
-fun HeroesList(
+fun AdvicesList(
     advices: List<Advice>,
     modifier: Modifier = Modifier,
     contentPadding: PaddingValues = PaddingValues(0.dp),
@@ -62,7 +62,7 @@ fun HeroesList(
     ) {
         LazyColumn(contentPadding = contentPadding) {
             itemsIndexed(advices) { index, advice ->
-                HeroListItem(
+                AdviceListItem(
                     advice = advice,
                     modifier = Modifier
                         .padding(horizontal = 16.dp, vertical = 8.dp)
@@ -84,7 +84,7 @@ fun HeroesList(
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
-fun HeroListItem(
+fun AdviceListItem(
     advice: Advice,
     modifier: Modifier = Modifier
 ) {
@@ -146,24 +146,24 @@ fun HeroListItem(
 @Preview("Light Theme")
 @Preview("Dark Theme", uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
-fun HeroPreview() {
+fun AdvicePreview() {
     val advice = Advice(
         R.string.day1_number,
         R.string.day1_short_description,
-        R.string.day23_description,
+        R.string.day1_description,
         R.drawable.advice_day1
     )
     SuperheroesTheme {
-        HeroListItem(advice = advice)
+        AdviceListItem(advice = advice)
     }
 }
 
 @Preview("Advices List")
 @Composable
-fun HeroesPreview() {
+fun AdvicesPreview() {
     SuperheroesTheme(darkTheme = false) {
         Surface(color = MaterialTheme.colorScheme.background) {
-            HeroesList(advices = HeroesRepository.advices)
+            AdvicesList(advices = AdviceRepository.advices)
         }
     }
 }

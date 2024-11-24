@@ -2,7 +2,7 @@ package com.example.superheroes.model
 
 import com.example.superheroes.R
 
-object HeroesRepository {
+object AdviceRepository {
     val advices = listOf(
         Advice(
             numberRes = R.string.day1_number,
