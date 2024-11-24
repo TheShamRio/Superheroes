@@ -16,7 +16,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -90,35 +92,30 @@ fun HeroListItem(
     modifier: Modifier = Modifier
 ) {
     Card(
-        modifier = modifier,
+        modifier = modifier.fillMaxWidth().height(400.dp),
     ) {
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(16.dp)
-        ) {
-            Column(modifier = Modifier.weight(1f)) {
+            Column(modifier = Modifier.weight(1f).padding(15.dp)) {
                 Text(
                     text = stringResource(hero.nameRes),
-                    style = MaterialTheme.typography.displaySmall
+                    style = MaterialTheme.typography.bodyLarge
                 )
                 Text(
                     text = stringResource(hero.descriptionRes),
-                    style = MaterialTheme.typography.bodyLarge
+                    style = MaterialTheme.typography.displaySmall
                 )
+
+                    Image(
+                        modifier = Modifier.padding(start = 0.dp, top = 10.dp),
+                        painter = painterResource(hero.imageRes),
+                        contentDescription = null,
+                        alignment = Alignment.Center,
+                        contentScale = ContentScale.FillWidth
+                    )
+                }
             }
-            Spacer(Modifier.width(16.dp))
-            Box(
-                modifier = Modifier.size(72.dp).clip(RoundedCornerShape(8.dp))
-            ) {
-                Image(
-                    painter = painterResource(hero.imageRes),
-                    contentDescription = null,
-                    alignment = Alignment.TopCenter,
-                    contentScale = ContentScale.FillWidth
-                )
-            }
+
         }
-    }
-}
+
 
 @Preview("Light Theme")
 @Preview("Dark Theme", uiMode = Configuration.UI_MODE_NIGHT_YES)
