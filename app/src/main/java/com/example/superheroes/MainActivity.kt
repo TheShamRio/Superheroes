@@ -38,7 +38,7 @@ fun SuperheroesApp() {
         topBar = { TopAppBar() }
     ) {
         paddingValues ->
-        val heroes = HeroesRepository.heroes
+        val heroes = HeroesRepository.advices
         HeroesList(heroes = heroes, contentPadding = paddingValues)
     }
 }

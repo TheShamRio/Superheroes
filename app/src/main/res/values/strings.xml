@@ -1,15 +1,153 @@
 <resources>
     <string name="app_name">Советы на 30 дней</string>
-    <string name="hero1">Nick the Night and Day</string>
-    <string name="description1">The Jetpack Hero</string>
-    <string name="hero2">Reality Protector</string>
-    <string name="description2">Understands the absolute truth</string>
-    <string name="hero3">Andre the Giant</string>
-    <string name="description3">Mimics the light and night to blend in</string>
-    <string name="hero4">Benjamin the Brave</string>
-    <string name="description4">Harnesses the power of canary to develop bravely</string>
-    <string name="hero5">Magnificent Maru</string>
-    <string name="description5">Effortlessly glides in to save the day</string>
-    <string name="hero6">Dynamic Yasmine</string>
-    <string name="description6">Ability to shift to any form and energize</string>
+
+    <!-- День 1 -->
+    <string name="day1_number">День 1</string>
+    <string name="day1_short_description">Начни с маленькой цели</string>
+    <string name="day1_description">Выбери небольшую задачу, которую можно завершить за день. Это создаст ощущение успеха.</string>
+
+    <!-- День 2 -->
+    <string name="day2_number">День 2</string>
+    <string name="day2_short_description">Планируй утро</string>
+    <string name="day2_description">Составь список дел перед сном, чтобы начать день продуктивно.</string>
+
+    <!-- День 3 -->
+    <string name="day3_number">День 3</string>
+    <string name="day3_short_description">Практикуй благодарность</string>
+    <string name="day3_description">Запиши три вещи, за которые ты благодарен сегодня. Это улучшит настроение.</string>
+
+    <!-- День 4 -->
+    <string name="day4_number">День 4</string>
+    <string name="day4_short_description">Минимизируй отвлекающие факторы</string>
+    <string name="day4_description">Создай пространство, свободное от шума и социальных сетей, для концентрации.</string>
+
+    <!-- День 5 -->
+    <string name="day5_number">День 5</string>
+    <string name="day5_short_description">Медитируй 5 минут</string>
+    <string name="day5_description">Проведи 5 минут в тишине, сосредотачиваясь на дыхании. Это помогает снизить стресс.</string>
+
+    <!-- День 6 -->
+    <string name="day6_number">День 6</string>
+    <string name="day6_short_description">Освой что-то новое</string>
+    <string name="day6_description">Потрать время на изучение чего-то, что всегда хотел освоить.</string>
+
+    <!-- День 7 -->
+    <string name="day7_number">День 7</string>
+    <string name="day7_short_description">Проведи цифровой детокс</string>
+    <string name="day7_description">Отключись от экрана на несколько часов и удели время чтению или прогулке.</string>
+
+    <!-- День 8 -->
+    <string name="day8_number">День 8</string>
+    <string name="day8_short_description">Установи водный баланс</string>
+    <string name="day8_description">Следи за потреблением воды. Выпей стакан воды после пробуждения.</string>
+
+    <!-- День 9 -->
+    <string name="day9_number">День 9</string>
+    <string name="day9_short_description">Сделай физическую зарядку</string>
+    <string name="day9_description">Потрать 10-15 минут на упражнения, чтобы поднять уровень энергии.</string>
+
+    <!-- День 10 -->
+    <string name="day10_number">День 10</string>
+    <string name="day10_short_description">Проведи уборку</string>
+    <string name="day10_description">Чистое пространство помогает навести порядок в мыслях.</string>
+
+    <!-- День 11 -->
+    <string name="day11_number">День 11</string>
+    <string name="day11_short_description">Установи приоритеты</string>
+    <string name="day11_description">Выбери три главные задачи на день и сосредоточься на их выполнении.</string>
+
+    <!-- День 12 -->
+    <string name="day12_number">День 12</string>
+    <string name="day12_short_description">Слушай вдохновляющий подкаст</string>
+    <string name="day12_description">Найди подкаст о саморазвитии или теме, которая тебе интересна.</string>
+
+    <!-- День 13 -->
+    <string name="day13_number">День 13</string>
+    <string name="day13_short_description">Сделай перерыв для прогулки</string>
+    <string name="day13_description">Проведи 15 минут на свежем воздухе, чтобы размяться и перезагрузиться.</string>
+
+    <!-- День 14 -->
+    <string name="day14_number">День 14</string>
+    <string name="day14_short_description">Установи режим сна</string>
+    <string name="day14_description">Постарайся ложиться и вставать в одно и то же время для улучшения здоровья.</string>
+
+    <!-- День 15 -->
+    <string name="day15_number">День 15</string>
+    <string name="day15_short_description">Разбей большую цель на части</string>
+    <string name="day15_description">Раздели крупную задачу на маленькие шаги и начни с первого.</string>
+
+    <!-- День 16 -->
+    <string name="day16_number">День 16</string>
+    <string name="day16_short_description">Избавься от ненужного</string>
+    <string name="day16_description">Потрать время на расхламление – удали старые файлы или разберись в шкафу.</string>
+
+    <!-- День 17 -->
+    <string name="day17_number">День 17</string>
+    <string name="day17_short_description">Проведи время с близкими</string>
+    <string name="day17_description">Позвони другу или проведи время с семьей, чтобы восстановить связь.</string>
+
+    <!-- День 18 -->
+    <string name="day18_number">День 18</string>
+    <string name="day18_short_description">Попробуй что-то новое</string>
+    <string name="day18_description">Испытай новый рецепт, хобби или занятие, чтобы разнообразить будни.</string>
+
+    <!-- День 19 -->
+    <string name="day19_number">День 19</string>
+    <string name="day19_short_description">Проверь свои цели</string>
+    <string name="day19_description">Проанализируй свой прогресс и настрой цели, если это нужно.</string>
+
+    <!-- День 20 -->
+    <string name="day20_number">День 20</string>
+    <string name="day20_short_description">Почитай книгу</string>
+    <string name="day20_description">Выбери книгу, которая тебя вдохновляет или учит чему-то новому.</string>
+
+    <!-- День 21 -->
+    <string name="day21_number">День 21</string>
+    <string name="day21_short_description">Поставь себе награду</string>
+    <string name="day21_description">Придумай поощрение за завершение сложной задачи – фильм, вкусняшку или отдых.</string>
+
+    <!-- День 22 -->
+    <string name="day22_number">День 22</string>
+    <string name="day22_short_description">Сосредоточься на дыхании</string>
+    <string name="day22_description">Практикуй глубокое дыхание в течение 5 минут, чтобы снизить стресс.</string>
+
+    <!-- День 23 -->
+    <string name="day23_number">День 23</string>
+    <string name="day23_short_description">Напиши письмо себе в будущее</string>
+    <string name="day23_description">Запиши свои мысли, мечты и цели, чтобы перечитать через год.</string>
+
+    <!-- День 24 -->
+    <string name="day24_number">День 24</string>
+    <string name="day24_short_description">Используй правило 2 минут</string>
+    <string name="day24_description">Сделай все задачи, которые занимают меньше 2 минут, сразу.</string>
+
+    <!-- День 25 -->
+    <string name="day25_number">День 25</string>
+    <string name="day25_short_description">Учись говорить "нет"</string>
+    <string name="day25_description">Сосредоточься на своих приоритетах, не соглашаясь на лишнее.</string>
+
+    <!-- День 26 -->
+    <string name="day26_number">День 26</string>
+    <string name="day26_short_description">Заведи дневник</string>
+    <string name="day26_description">Записывай мысли, цели или просто то, как прошел день.</string>
+
+    <!-- День 27 -->
+    <string name="day27_number">День 27</string>
+    <string name="day27_short_description">Проведи день без жалоб</string>
+    <string name="day27_description">Попробуй не жаловаться целый день и сосредоточься на позитиве.</string>
+
+    <!-- День 28 -->
+    <string name="day28_number">День 28</string>
+    <string name="day28_short_description">Визуализируй свою цель</string>
+    <string name="day28_description">Представь, как будет выглядеть достижение твоей мечты, и опиши это.</string>
+
+    <!-- День 29 -->
+    <string name="day29_number">День 29</string>
+    <string name="day29_short_description">Сделай доброе дело</string>
+    <string name="day29_description">Помоги кому-то, поделись знанием или просто скажи теплые слова.</string>
+
+    <!-- День 30 -->
+    <string name="day30_number">День 30</string>
+    <string name="day30_short_description">Подведи итоги месяца</string>
+    <string name="day30_description">Проанализируй, чему ты научился за эти 30 дней, и составь план на будущее.</string>
 </resources>
