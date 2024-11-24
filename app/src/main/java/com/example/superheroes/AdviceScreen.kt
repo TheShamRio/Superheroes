@@ -12,6 +12,7 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -25,6 +26,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -35,14 +37,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.superheroes.model.Advice
 import com.example.superheroes.model.HeroesRepository
-import com.example.superheroes.model.HeroesRepository.advices
 import com.example.superheroes.ui.theme.SuperheroesTheme
 
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun HeroesList(
-    heroes: List<Advice>,
+    advices: List<Advice>,
     modifier: Modifier = Modifier,
     contentPadding: PaddingValues = PaddingValues(0.dp),
 ) { val visibleState = remember {
@@ -81,19 +82,22 @@ fun HeroesList(
     }
 }
 
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun HeroListItem(
     advice: Advice,
     modifier: Modifier = Modifier
 ) {
+    // Состояние для управления видимостью описания
+    val isDescriptionVisible = remember { mutableStateOf(false) }
+
     Card(
         modifier = modifier
-            .fillMaxWidth() // Ширина будет занимать всю доступную ширину
-            .wrapContentHeight(), // Высота подстраивается под содержимое
+            .fillMaxWidth()
+            .wrapContentHeight(),
     ) {
         Column(
-            modifier = Modifier
-                .padding(15.dp)
+            modifier = Modifier.padding(15.dp)
         ) {
             Text(
                 text = stringResource(advice.numberRes),
@@ -106,19 +110,34 @@ fun HeroListItem(
             Image(
                 modifier = Modifier
                     .height(300.dp)
-                    .padding(top = 10.dp), // Убираем лишние отступы
+                    .padding(top = 10.dp)
+                    .clickable {
+                        // Переключаем видимость описания
+                        isDescriptionVisible.value = !isDescriptionVisible.value
+                    },
                 painter = painterResource(advice.imageRes),
                 contentDescription = null,
                 alignment = Alignment.Center,
                 contentScale = ContentScale.FillWidth
             )
-            Text(
-                modifier = Modifier
-                    .padding(top = 10.dp),
-                text = stringResource(advice.descriptionRes),
-                style = MaterialTheme.typography.displaySmall
-            )
-
+            // Анимация для видимости текста
+            AnimatedVisibility(
+                visible = isDescriptionVisible.value,
+                enter = slideInVertically(
+                    animationSpec = spring(
+                        stiffness = StiffnessVeryLow,
+                        dampingRatio = DampingRatioLowBouncy
+                    ),
+                    initialOffsetY = { it }
+                ),
+                exit = fadeOut(animationSpec = spring())
+            ) {
+                Text(
+                    modifier = Modifier.padding(top = 10.dp),
+                    text = stringResource(advice.descriptionRes),
+                    style = MaterialTheme.typography.bodyMedium
+                )
+            }
         }
     }
 }
@@ -131,7 +150,7 @@ fun HeroPreview() {
     val advice = Advice(
         R.string.day1_number,
         R.string.day1_short_description,
-        R.string.day1_description,
+        R.string.day23_description,
         R.drawable.advice_day1
     )
     SuperheroesTheme {
@@ -144,7 +163,7 @@ fun HeroPreview() {
 fun HeroesPreview() {
     SuperheroesTheme(darkTheme = false) {
         Surface(color = MaterialTheme.colorScheme.background) {
-            HeroesList(heroes = HeroesRepository.advices)
+            HeroesList(advices = HeroesRepository.advices)
         }
     }
 }

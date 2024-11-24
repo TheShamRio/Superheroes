@@ -37,9 +37,9 @@ fun SuperheroesApp() {
         modifier = Modifier.fillMaxSize(),
         topBar = { TopAppBar() }
     ) {
-        paddingValues ->
-        val heroes = HeroesRepository.advices
-        HeroesList(heroes = heroes, contentPadding = paddingValues)
+            paddingValues ->
+        val advices = HeroesRepository.advices
+        HeroesList(advices = advices, contentPadding = paddingValues)
     }
 }
 
